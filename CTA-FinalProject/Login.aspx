@@ -38,7 +38,7 @@
             </tr>
              <tr>   
                 <td></td>
-                <td class="auto-style3"><asp:Button ID="SubBtn" runat="server" Text="Login" OnClick="LogIn_Click"/></td>
+                <td class="auto-style3"><asp:Button ID="SubBtn" runat="server" Text="Login" OnClick="LogIn_Click"/></td> <%--currently test the connection to the SQL server--%>
                 <td><asp:HyperLink ID="RegisterLink" NavigateUrl="~/Registation.aspx" runat="server">Register</asp:HyperLink></td>
              </tr>
          </table>
