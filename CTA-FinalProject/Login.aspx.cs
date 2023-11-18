@@ -21,27 +21,35 @@ namespace CTA_FinalProject
 
         protected void LogIn_Click(object sender, EventArgs e)
         {
-            //this is for test the connection
-            //from here
             {
                 try
                 {
                     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLConnection"].ConnectionString);
-                    conn.Open();
 
-                    if (conn.State == ConnectionState.Open)
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.users where LUCMail=@lucmail and Password=@password", conn);
+
+                    cmd.Parameters.AddWithValue("@lucmail", EmailTextBox.Text);
+                    cmd.Parameters.AddWithValue("@password", PSWTextBox.Text);
+
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    if (dt.Rows.Count > 0)
                     {
-                        Response.Write("Connection OK!");
-                        conn.Close();
+                        Response.Redirect("HomePage.aspx");
                     }
                     else
                     {
-                        Response.Write("No Connection!");
+                        Response.Write("User email or password incorrect");
                     }
                 }
                 catch { Response.Write("No Connection!"); }
             }
-            //to here can be deleted
         }
     }
 }

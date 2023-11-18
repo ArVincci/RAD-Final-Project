@@ -46,7 +46,7 @@
             <tr>
                 <td class="auto-style2">Confirm Password:</td>
                 <td class="auto-style4"><asp:TextBox ID="PSWConfirmTextBox" runat="server"></asp:TextBox></td>
-                    <td><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" Display="Dynamic" ErrorMessage="* Password Confirmation is required" ForeColor="Red" ControlToValidate="PSWConfirmTextBox" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <td><asp:CompareValidator runat="server" ID="ComparePass" controltovalidate="PSWTextBox" controltocompare="PSWConfirmTextBox" operator="equal" errormessage="* The Passwords do not match" ForeColor="Red"/><br />
                     </td>
             </tr>
              <tr>   
