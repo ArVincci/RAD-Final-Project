@@ -26,7 +26,8 @@ namespace CTA_FinalProject
                 {
                     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLConnection"].ConnectionString);
 
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.users where LUCMail=@lucmail and Password=@password", conn);
+                    string SearchQuery = ("SELECT * FROM dbo.users where LUCMail=@lucmail and Password=@password");
+                    SqlCommand cmd = new SqlCommand(SearchQuery, conn);
 
                     cmd.Parameters.AddWithValue("@lucmail", EmailTextBox.Text);
                     cmd.Parameters.AddWithValue("@password", PSWTextBox.Text);
