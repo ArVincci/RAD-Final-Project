@@ -23,7 +23,8 @@
                 <td>Luc Email:</td>
                 <td class="auto-style3"><asp:TextBox ID="EmailTextBox" runat="server"></asp:TextBox></td>
                    <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="* Student Email is required" ControlToValidate="EmailTextBox" ForeColor="Red" SetFocusOnError="True"></asp:RequiredFieldValidator>
-                   </td>                   
+                   </td>               
+                    <td><asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="* Invalid email address!" ControlToValidate="EmailTextBox" ValidationExpression="^[a-zA-Z0-9._%+-]+@luc\.edu$" ForeColor="Red" SetFocusOnError="true"></asp:RegularExpressionValidator></td>
             </tr>
             <tr>
                 <td class="auto-style2">Student Name:</td>
@@ -39,13 +40,13 @@
             </tr>
             <tr>
                 <td class="auto-style2">Password:</td>
-                <td class="auto-style4"><asp:TextBox ID="PSWTextBox" runat="server"></asp:TextBox></td>
+                <td class="auto-style4"><asp:TextBox ID="PSWTextBox" TextMode="Password" runat="server"></asp:TextBox></td>
                     <td><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ErrorMessage="* Password is required" ForeColor="Red" ControlToValidate="PSWTextBox" SetFocusOnError="True"></asp:RequiredFieldValidator>
                     </td>
             </tr>
             <tr>
                 <td class="auto-style2">Confirm Password:</td>
-                <td class="auto-style4"><asp:TextBox ID="PSWConfirmTextBox" runat="server"></asp:TextBox></td>
+                <td class="auto-style4"><asp:TextBox ID="PSWConfirmTextBox" TextMode="Password" runat="server"></asp:TextBox></td>
                     <td><asp:CompareValidator runat="server" ID="ComparePass" controltovalidate="PSWTextBox" controltocompare="PSWConfirmTextBox" operator="equal" errormessage="* The Passwords do not match" ForeColor="Red"/><br />
                     </td>
             </tr>
