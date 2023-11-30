@@ -5,21 +5,64 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <style type="text/css">
-        .auto-style2 {
-            height: 29px;
-        }
-        .auto-style3 {
-            width: 178px;
-        }
-        .auto-style4 {
-            height: 29px;
-            width: 178px;
-        }
-    </style>
+   
+    <%--Bootstrap CSS--%>
+    <link href="Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
+     <%--DataTables CSS--%>
+    <link href="Datatables/CSS/jquery.dataTables.min.css" rel="stylesheet" />
+       <%--FontAwesome CSS--%>
+    <link href="Fontawesome/css/all.css" rel="stylesheet" />
+     <%--Custom CSS--%>
+    <link href="CSS/CustomStyleSheet.css" rel="stylesheet" />
+      <%--jquery--%>
+    <script src="Bootstrap/JS/jquery-3.2.1.slim.min.js"></script>
+      <%--popper js--%>
+    <script src="Bootstrap/JS/popper.min.js"></script>
+      <%--Bootstrap js--%>
+    <script src="Bootstrap/JS/bootstrap.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
+
+        <div>
+           <nav class="navbar navbar-expand-lg navbar-light">
+
+            <a class="navbar-brand" href="#">
+            <img src="Images/CTA%20logo%202.png" width="30" height="30" />
+            CTA tracker
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#navbarSupportedContent" aria-controls="navbarSuppportedContent" 
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href=".aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About Us</a>
+                    </li>
+
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        
+                     
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server">Logout</asp:LinkButton>
+                            </li>
+                    
+                    </ul>
+                </div>
+
+               </nav>
+            </div>
+
+
          <table>
                 <tr>
                     <th>LUC CTA Login</th>                  

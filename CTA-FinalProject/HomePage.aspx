@@ -23,7 +23,7 @@
             <label for="ddlTo">To:</label>
             <asp:DropDownList ID="ddlTo" runat="server">
                 <asp:ListItem Value="LakeShore">Lake Shore Campus</asp:ListItem>
-                <asp:ListItem Value="Downtown">Downtown Campus</asp:ListItem>
+                <asp:ListItem Value="Downtown">Downtown Campus</asp:ListItem> 
             </asp:DropDownList>
                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="SubmitButton_Click" />
         </div>
