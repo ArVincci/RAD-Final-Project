@@ -128,7 +128,7 @@ namespace CTA_FinalProject
                                 resultOutput += $"Destination Name: {destinationName}<br/>";
                                 resultOutput += $"Arrival Time: {aarivalTime}<br/><br/>";
                             }
-                            b   .Text = resultOutput;
+                            busLiteral.Text = resultOutput;
                         }
                     }
                 }
