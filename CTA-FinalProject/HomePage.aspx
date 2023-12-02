@@ -27,6 +27,11 @@
             </asp:DropDownList>
                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="SubmitButton_Click" />
         </div>
+         <div id="resultsContainer" runat="server">
+            <asp:Literal ID="litResults" runat="server"></asp:Literal>
+             <asp:Literal ID="busLiteral" runat="server"></asp:Literal>
+        </div>
     </form>
+   
 </body>
 </html>
