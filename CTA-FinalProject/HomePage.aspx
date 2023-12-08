@@ -87,19 +87,22 @@ text-align: left;
     padding: 10px;
     margin-top: 10px;
 }
-
+ a {
+            color:white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
 
  <header>
-            <img src="imgs/CTA%20logo%202.png" width="30" height="30"  alt="CTA Tracker>
-           
+            <img src="imgs/CTA%20logo%202.png" width="30" height="30"  alt="CTA Tracker"/>
+           <a href="CampusShuttle.aspx">Campus shuttle</a>
         </header>
 
         <div class="container">
-            <img src="imgs\Loyola%20homepage%20image.jpg" alt="Outside Image" class="centered-image">
+            <img src="imgs\Loyola%20homepage%20image.jpg" alt="Outside Image" class="centered-image"/>
             <div class="card">
        
  <center>
@@ -123,7 +126,7 @@ text-align: left;
                 <asp:Literal ID="busLiteral" runat="server"></asp:Literal>
             </div>
         </div>
-         
+         </div>
     <footer>
             <p>&copy; CTA Tracker All rights reserved. <a class="footerlinks" href="https://www.luc.edu/">Loyola University Chicago</a></p>
         </footer>

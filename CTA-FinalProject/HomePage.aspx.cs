@@ -57,7 +57,8 @@ namespace CTA_FinalProject
                                         string aarivalTime = arrival.arrT;
                                         resultOutput += $"Station Name: {stationName}<br/>";
                                         resultOutput += $"Line Name: {lineName}<br/>";
-                                        resultOutput += $"Destination Name: {destinationName}<br/>";
+                                        resultOutput += $"Destination : Chicago/State <br/>";
+                                        resultOutput += $"Final Destination : {destinationName}<br/>";
                                         resultOutput += $"Arrival Time: {aarivalTime}<br/><br/>";
                                         //Console.WriteLine($"Station Name: {stationName}");
                                         //Console.WriteLine($"Line Name: {lineName}");
@@ -75,7 +76,8 @@ namespace CTA_FinalProject
                                         string aarivalTime = arrival.arrT;
                                         resultOutput += $"Station Name: {stationName}<br/>";
                                         resultOutput += $"Line Name: {lineName}<br/>";
-                                        resultOutput += $"Destination Name: {destinationName}<br/>";
+                                        resultOutput += $"Destination : Loyola <br/>";
+                                        resultOutput += $"Final Destination : {destinationName}<br/>";
                                         resultOutput += $"Arrival Time: {aarivalTime}<br/><br/>";
                                         //Console.WriteLine($"Station Name: {stationName}");
                                         //Console.WriteLine($"Line Name: {lineName}");
@@ -125,7 +127,8 @@ namespace CTA_FinalProject
                                 string aarivalTime = arrival.prdtm;
                                 resultOutput += $"Station Name: {stopName}<br/>";
                                 resultOutput += $"Line Name: {route}<br/>";
-                                resultOutput += $"Destination Name: {destinationName}<br/>";
+                                resultOutput += from == "LakeShore"? $"Destination Name: Michigan and Chestnut <br/>": $"Destination Name: Sheridan and Kenmore <br/>";
+                                resultOutput += $"Final Destination Name: {destinationName}<br/>";
                                 resultOutput += $"Arrival Time: {aarivalTime}<br/><br/>";
                             }
                             busLiteral.Text = resultOutput;

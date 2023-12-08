@@ -14,7 +14,7 @@
         }
  
         header {
-            background-color: #000; /* Black header background color */
+            background-color: #862041; /* Black header background color */
             color: #fff; /* Text colour of header */
             padding: 10px;
             text-align: center;
@@ -28,7 +28,7 @@
         }
  
         footer {
-            background-color: #000; /* Black footer background color */
+            background-color: #862041; /* Black footer background color */
             color: #fff; /* Text color for the footer */
             padding: 10px;
             text-align: center;
@@ -51,7 +51,7 @@
 <body>
     <form id="form1" runat="server">  
         <header>
-<img src="images/CTA%20logo%202.png" width="30" height="30"  alt="CTA Tracker"/>
+<img src="imgs/CTA%20logo%202.png" width="30" height="30"  alt="CTA Tracker"/>
             <a href="CampusShuttle.aspx">Campus shuttle</a>
 </header>
         <div class="container">

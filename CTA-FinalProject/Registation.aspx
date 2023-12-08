@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style> a {
+            color:white;
+            text-decoration: none;
+        }
+        </style>
      <link href="Css/CustomStyles.css" rel="stylesheet" />
 </head>
 <body>
@@ -12,7 +17,7 @@
                 
  <header>
             <img src="imgs/CTA%20logo%202.png" width="30" height="30"  alt="CTA Tracker">
-           
+           <a href="CampusShuttle.aspx">Campus shuttle</a>
         </header>
          <div class="container">
            <img src="imgs\Loyola%20homepage%20image.jpg" alt="Outside Image" class="centered-image">
