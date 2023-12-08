@@ -71,7 +71,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\CustomStyles.css" />
     <Content Include="HomePage.aspx" />
+    <Content Include="imgs\black account icon.jpg" />
+    <Content Include="imgs\CTA logo 2.png" />
+    <Content Include="imgs\Loyola homepage image.jpg" />
+    <Content Include="imgs\Register icon.png" />
+    <Content Include="imgs\Trip planner.png" />
     <Content Include="Registation.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />

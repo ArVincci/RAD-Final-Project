@@ -5,9 +5,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <link href="Css/CustomStyles.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
+                
+ <header>
+            <img src="imgs/CTA%20logo%202.png" width="30" height="30"  alt="CTA Tracker">
+           
+        </header>
+         <div class="container">
+           <img src="imgs\Loyola%20homepage%20image.jpg" alt="Outside Image" class="centered-image">
+                   <div class="card">
+            
+                                <center>
+                                    <img class="account-icon"src="imgs/Register%20icon.png" />
+                                </center>
          <table>
                 <tr>
                     <%--<a href="Registation.aspx">Registation.aspx</a>--%>
@@ -56,7 +69,11 @@
                 <td><asp:HyperLink ID="LoginLink" NavigateUrl="~/Login.aspx" runat="server">Log In</asp:HyperLink></td>
              </tr>
          </table>
-
+                       </div>
+             </div>
+ <footer>
+            <p>&copy; CTA Tracker All rights reserved. <a class="footerlinks" href="https://www.luc.edu/">Loyola University Chicago</a></p>
+        </footer>
     </form>
 </body>
 </html>
