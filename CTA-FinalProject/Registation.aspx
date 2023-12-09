@@ -9,6 +9,9 @@
             color:white;
             text-decoration: none;
         }
+        #LoginLink {
+        color:lightblue;
+        }
         </style>
      <link href="Css/CustomStyles.css" rel="stylesheet" />
 </head>

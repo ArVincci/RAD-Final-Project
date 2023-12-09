@@ -46,20 +46,24 @@
             color:white;
             text-decoration: none;
         }
+        .shuttle {
+        color:#862041;
+        text-decoration:none;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">  
         <header>
 <img src="imgs/CTA%20logo%202.png" width="30" height="30"  alt="CTA Tracker"/>
-            <a href="CampusShuttle.aspx">Campus shuttle</a>
+            <a  href="CampusShuttle.aspx">Campus shuttle</a>
 </header>
         <div class="container">
         <h2>Intercampus Shuttle</h2>
         <p> The Loyola Intercampus Shuttle is a supplemental transportation service only available for current Loyola University Chicago students, faculty, and staff. Service operates on weekdays only, when classes are in session during the academic year (fall/spring only). Boarding passengers must show their Loyola issued Campus Card to board the intercampus shuttle.</p>
 
         <p class="campus"> The shuttle runs in every 30 min interval from both campuses</p>
-            <p>For bus tracking : <a href="https://luc.tripshot.com/g/tms/TMS.html#LoginPlace:%7B%22r%22:%22NONE%22%7D">Tripshot</a></p>
+            <p>For bus tracking : <a class="shuttle" href="https://luc.tripshot.com/g/tms/TMS.html#LoginPlace:%7B%22r%22:%22NONE%22%7D">Tripshot</a></p>
             </div>
         
     </form>

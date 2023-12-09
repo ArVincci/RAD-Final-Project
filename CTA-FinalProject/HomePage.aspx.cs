@@ -30,6 +30,12 @@ namespace CTA_FinalProject
         protected async Task showTrainsAsync(string from, string to)
         {
             string loyolaMapId = from == "LakeShore" ? "41300" : "41450";
+            string errorResult = "";
+            if (from == to) {
+                errorResult += "From and To cannot be same";
+                litResults.Text = errorResult;
+                return;
+            }
             string redLineAPI = $"https://www.transitchicago.com/api/1.0/ttarrivals.aspx?key=c68cc7ab94214986b1eddff29b4390e8&mapid={loyolaMapId}&max=10&outputType=JSON";
             using (HttpClient client = new HttpClient())
             {
@@ -60,10 +66,6 @@ namespace CTA_FinalProject
                                         resultOutput += $"Destination : Chicago/State <br/>";
                                         resultOutput += $"Final Destination : {destinationName}<br/>";
                                         resultOutput += $"Arrival Time: {aarivalTime}<br/><br/>";
-                                        //Console.WriteLine($"Station Name: {stationName}");
-                                        //Console.WriteLine($"Line Name: {lineName}");
-                                        //Console.WriteLine($"Destination Name: {destinationName}");
-                                        //Console.WriteLine($"Arrival Time: {aarivalTime}");
                                     }
                                 }
                                 else
@@ -79,10 +81,6 @@ namespace CTA_FinalProject
                                         resultOutput += $"Destination : Loyola <br/>";
                                         resultOutput += $"Final Destination : {destinationName}<br/>";
                                         resultOutput += $"Arrival Time: {aarivalTime}<br/><br/>";
-                                        //Console.WriteLine($"Station Name: {stationName}");
-                                        //Console.WriteLine($"Line Name: {lineName}");
-                                        //Console.WriteLine($"Station Name: {destinationName}");
-                                        //Console.WriteLine($"Station Name: {aarivalTime}");
                                     }
                                 }
                             }
@@ -101,6 +99,13 @@ namespace CTA_FinalProject
         protected async Task showBusessAsync(string from, string to)
         {
             string loyolaStpId = from == "LakeShore" ? "1031" : "1127";
+            string errorResult = "";
+            if (from == to)
+            {
+                errorResult += "From and To cannot be same";
+                litResults.Text = errorResult;
+                return;
+            }
             string busAPI = $"http://ctabustracker.com/bustime/api/v2/getpredictions?key=hAZWFBedtxYmzhejPDhZCaSjA&stpid={loyolaStpId},1024&format=json";
             using (HttpClient client = new HttpClient())
             {
